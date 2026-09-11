@@ -349,6 +349,59 @@ h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 16px; }
   margin-bottom: 4px;
 }
 
+/* Conheça a Clínica (vídeo) --------------------------------------------- */
+
+.clinica {
+  background: var(--texto);
+  color: var(--branco);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.clinica::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(80, 200, 120, 0.18), transparent 70%);
+  bottom: -220px; left: -220px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.clinica .container { position: relative; z-index: 1; }
+
+.clinica .section-tag { color: var(--verde); }
+
+.clinica h2 { color: var(--branco); }
+
+.clinica .section-lead {
+  color: rgba(255, 255, 255, 0.75);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clinica__video-frame {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(80, 200, 120, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.clinica__video-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(80, 200, 120, 0.45);
+}
+
+.clinica__video-frame video {
+  width: 100%;
+  max-height: 600px;
+  display: block;
+}
+
 /* Diferenciais ---------------------------------------------------------- */
 
 .diferenciais { background: var(--branco); }
